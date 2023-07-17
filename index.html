@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-commerce Webiste from Tailwind CSS</title>
+
+
+<!-- Fontawesome icons -->
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Custom CSS -->
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<link rel="stylesheet" type="text/css" href="styles_src_tw.css">
+
+<script src="script.js"></script>
+
+<!-- Tailwind CSS  CDN -->
+
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+
+<!-- Custom JavaScript file for Custom configuration. -->
+
+<!-- 	<script src="tailwind-default.config.js"></script>
+
+<script src="tailwind.config.js"></script> -->
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="m-2">
+
+<!-- Start of Header Section  -->
+
+<section>
+<header class="flex justify-between lg:justify-evenly sm:relative sm:fixed">
+
+<!-- Logo -->
+
+<div id="logo">
+<img src="Images/logo_5.png" class="w-28 h-20">
+</div>
+
+<!-- search bar -->
+
+<div class="border-2 border-pink-500 rounded rounded-3xl sm:px-1 sm:flex sm:my-8 md:flex md:justify-between md:px-6 lg:flex lg:space-x-4 lg:py-4 lg:px-8  lg:justify-between">
+
+<input type="text" placeholder="search by products" class="text-xl" >
+
+
+<span><i class="fa-solid fa-magnifying-glass" style="color: #929daf;"></i></span>
+</div>
+
+<!-- Customer Support -->
+
+<div class="customer w-fit bottom-0 py-6 sm:hidden md:block justify-cente items-center">
+<div class="md:justify-cente items-center"><i class="fa-solid fa-phone" style="color: #538cee;"> - +91-000-000-0000</i></div>
+<div class="md:justify-cente items-center">Call for the best deals <br>Daily(9:00am to 6:00pm)</div>
+</div>
+
+<!-- More Icon Options -->
+
+<div class="more-icon fixed flex bg-white justify-evenly w-full xl:w-1/4 z-20 bottom-0  xl:relative xl:flex mt-2 justify-between py-6 ">
+
+<div class="cursor-pointer">
+
+<div class=" flex justify-center items-center "><i class="fa-solid fa-guitar fa-xl"></i></div>
+
+<div class=" flex items-center justify-center mt-2 px-4 py-2">Used Gears</div>
+
+</div>
+
+<div class="cursor-pointer">
+
+<div class=" flex justify-center items-center "><i class="fa-solid fa-users fa-xl"></i></div>
+
+<div class=" flex items-center justify-center mt-2 px-4 py-2">Connect</div>
+
+</div>
+
+<div class="cursor-pointer">
+
+<div class=" flex justify-center items-center "><i class="fa-solid fa-ellipsis fa-xl"></i></div>
+
+<div class=" flex items-center justify-center mt-2 px-4 py-2">More</div>
+
+</div>
+
+<div class="cursor-pointer">
+
+<div class=" flex justify-center items-center "><i class="fa-solid fa-heart fa-xl"></i></div>
+
+<div class=" flex items-center justify-center mt-2 px-4 py-2">Wishlist</div>
+
+</div>
+
+<div class="cursor-pointer">
+
+<div class=" flex justify-center items-center ">
+<i class="fa-solid fa-cart-shopping fa-xl"></i>	</div>
+
+<div class=" flex items-center justify-center mt-2 px-4 py-2">Cart</div>
+
+</div>
+
+</header>
+</section>
+
+<!-- End of Header Section  -->	
+
+<!-- Start of Navbar Section  -->
+
+<section class="mt-4">
+<div class="navbar sm:flex bg-blue-800 text-white font-bold relative flex sm:justify-between md:justify-between lg:items-center  ">
+
+
+<div class="menu sm:ml-4 sm:my-6 md:m-2 md:py-2 lg:items-center lg:hidden" 
+onclick="hideShow()" id="burger" >
+
+
+<div class="menu-icon" onclick="myFunction(this)">
+<div class="bar1 w-8 h-1.5 my-1 bg-white p-1 rounded-sm	z-10"></div>
+<div class="bar2 w-8 h-1.5 my-1 bg-white p-1 rounded-sm	z-10"></div>
+<div class="bar3 w-8 h-1.5 my-1 bg-white p-1 rounded-sm	z-10"></div>
+</div>
+
+</div>
+
+<!-- Navbar lists -->
+
+<div class="navbar-list  lg:block sm:md:pt-2 lg:items-center " >
+<ul>
+
+<div class="bg-blue-800 hidden md:bg-blue-800 lg:flex lg:justify-center lg:items-center lg:px-4" id="navBar">
+
+<div class="transform lg:hover:scale-125 transition-ease-in duration-300">
+<li class="mr-8"><a href="#">About</a><i class="fa-solid fa-chevron-down ml-1"></i></li>
+</div> 
+
+<div class="transform lg:hover:scale-125 transition-ease-in duration-300">
+<li class="mr-8"><a href="#">Support</a><i class="fa-solid fa-chevron-down ml-1 " ></i></li>
+</div>
+
+<div class="transform lg:hover:scale-125 transition-ease-in duration-300">
+<li class="mr-8"><a href="#">Services</a><i class="fa-solid fa-chevron-down ml-1" ></i></li>
+</div>
+
+<div class="transform lg:hover:scale-125 transition-ease-in duration-300">
+<li class="mr-8"><a href="#">Hot Deals</a><i class="fa-solid fa-chevron-down ml-1" ></i></li>
+</div>
+
+<div class="transform lg:hover:scale-125 transition-ease-in duration-300">
+<li class="mr-8"><a href="#">Shop by Brands</a><i class="fa-solid fa-chevron-down ml-1" ></i></li>
+</div>
+
+<div class="transform lg:hover:scale-125 transition-ease-in duration-300">
+<li class="mr-8"><a href="#">Shop by Category</a><i class="fa-solid fa-chevron-down ml-1" ></i></li>
+</div>
+</div>
+</ul>
+</div>
+
+<div class="sm:inline-flex  sm:top-0 sm:relative sm:flex sm:justify-between sm:text-center sm:right-0 md:flex justify-between w-fit lg:justify-center lg:items-center">
+
+<div class="lg:flex lg:float-right lg:flex-end">
+
+<div class="mx-2 my-2 sm:py-">
+<span><a href="#">Track your Order</a></span>
+</div>
+<div class="sm:block my-2 lg:border lg:h-8 border-r-white"></div>
+<div class="sm:my-2 pb-4 mx-2 inline-flex ">
+<span class="mr-2 px-2  border-2 border-white rounded-lg hover:bg-white hover:text-blue-800"><a href="#">Login</a></span>
+<div class="border border-r-white"></div>
+<span class="ml-2 px-2  border-2 border-white rounded-lg hover:bg-white hover:text-blue-800"><a href="#">SignUp</a></span>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- End of Navbar Section  -->
+
+<!-- Start of Marketing Section  -->
+
+<section>
+<div>
+<div class="my-4 inline-flex p-2 shadow-2xl grid grid-cols-7">
+<div class="flex justify-center items-center">
+<img src="Images/2_yr_warranty.png" class="w-20 h-20">
+<h6 class="hidden ">2 - Year Warranty</h6>
+</div>
+
+<div class="flex justify-center items-center">
+<img src="Images/free_tech_support_3.png" class="w-20 h-20">
+<h6 class="hidden ">Free Tech Support</h6>
+</div>
+
+<div class="flex justify-center items-center">
+<img src="Images/cashback.png" class="w-20 h-20">
+<h6 class="hidden ">Cash Back</h6>
+</div>
+
+<div class="flex justify-center items-center">
+<img src="Images/5K-2.png" class="w-20 h-20 mr-2">
+<h6 class="hidden ">Over 5K+ Products</h6>
+</div>
+
+<div class="flex justify-center items-center">
+<img src="Images/15_days_return.png" class="w-20 h-20">
+<h6 class="hidden ">15 Days Return <span class="text-xs">T&C</span></h6>
+</div>
+
+<div class="flex justify-center items-center">
+<img src="Images/free_shipping_2.png" class="mr-2 w-20 h-20">
+<h6 class="hidden ">Free Shipping <span class="text-xs">T&C</span></h6>
+</div>
+
+<div class="flex justify-center items-center">
+<img src="Images/refer-earn-icon.jpg" class="mr-3 w-20 h-20">
+<h6 class="hidden ">Refer & Earn</h6>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- End of Marketing Section  -->
+
+
+<!-- Start of Floating Section  -->
+
+<section>
+<div>
+
+<div class="arrow fixed bg-white justify-center items-center border-2-white w-16 h-16 rounded-full m-4 p-5 right-0  z-10 ">
+<a href=""><i class="fa-solid fa-arrow-down fa-2xl fa-bounce"></i></a>
+</div>
+
+
+<div>
+<img src="Images/cover_image.png">
+</div>
+<div>
+<img src="Images/maxresdefault_123.jpg">
+</div>
+</div>
+</section>
+
+<!-- End of Floating Section  -->
+
+<!-- Start of Top Guitars Section  -->
+
+<section class="bg_img_1 py-6 my-4">
+<div class="mt-2">
+<img src="https://img.paisawapas.com/ovz3vew9pw/2023/03/23124438/Top-Deals-Banner_V1.png">
+</div>
+
+<div id="offer" class="flex justify-center items-center">
+
+<span class="sm:text-2xl md:text-3xl lg:text-4xl font-bold inline-flex px-4 border-b-2 border-gray-500 rounded-full shadow-xl text-gray-200 p-2 px-4 my-4">Top Deals</span>
+
+</div>
+
+<div class="slideshow-container flex gap-5 m-4 sm:shrink sm:text-sm">
+
+<div class="container mySildes1 p-2 border border-gray-500 ml-2  shadow-2xl">
+<img src="Images/jcraft_guitar.png" class="overlay_img rounded-lg shadow-lg ">
+
+<div class="overlay">
+<div class="overlay_text">J-craft Guitar</div>
+</div>
+</div>
+
+<div class="container mySildes1 p-2 border border-gray-500 rounded-lg  shadow-2xl">
+<img src="Images/fender_jaguar_guitar.jpg" class="ovaerlay_img rounded-lg shadow-lg">
+
+<div class="overlay">
+<div class="overlay_text">Fender Jaguar Jazz</div>
+</div>
+
+</div>
+
+<div class="container mySildes1 p-2 border border-gray-500 rounded-lg  shadow-2xl">
+<img src="Images/epiphone_casino_guitar.jpg" class="ovaerlay_img rounded-lg shadow-lg">
+
+<div class="overlay">
+<div class="overlay_text">Epiphone Casino</div>
+</div>
+
+</div>
+
+<div class="container mySildes1 p-2 border border-gray-500 rounded-lg  shadow-2xl">
+<img src="Images/electric_guitar_2.png" class="ovaerlay_img rounded-lg shadow-lg">
+<div class="overlay">
+<div class="overlay_text">Electric Guitar</div>
+</div>
+
+</div>
+
+<div class="container mySildes1 p-2 border border-gray-500 rounded-lg  shadow-2xl">
+<img src="Images/acoustic_guitar_2.jpg" class="ovaerlay_img rounded-lg shadow-lg">
+<div class="overlay">
+<div class="overlay_text">Acoustic Guitar</div>
+</div>
+
+</div>
+
+<div class="container mySildes1 p-2 border border-gray-500 rounded-lg shadow-2xl ">
+<img src="Images/antque_guitar.jpg" class="ovaerlay_img rounded-lg shadow-lg">
+<div class="overlay">
+<div class="overlay_text">Antique Guitar</div>
+</div>
+
+</div>
+
+
+</div>
+</section>
+
+<!-- End of Top Guitars Section  -->
+
+<section>
+<div class="shadow-lg my-4">
+<img src="Images/box-categorybanner.jpg">
+</div>
+</section>
+
+<!-- Start of Guitar's Accessories Section  -->
+
+<section>
+
+<div class="mb-4 sm:text-2xl md:text-3xl lg:text-4xl font-bold border-b-2 border-gray-500 flex justify-center items-center">
+
+<div class="sm:text-2xl md:text-3xl lg:text-4xl font-bold inline-flex px-4 border-b-2 border-gray-500 rounded-full shadow-xl text-gray-900 p-2 px-4 my-4">Guitar's Accessories</div>
+
+</div>
+
+
+<div class="flex flex-col sm:grid grid-cols-3 gap-6 relative px-8" id="scroll-x">				
+
+<!-- First Accessories -->
+
+<div class="mt-10 ml-2 rounded rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+<img src="Images/Guitar_Accessor_1.jpg" class="object-cover pt-12 ">
+<div class="m-4">
+
+<span class="font-bold">Guitar Accessor Kit Include...</span>
+
+<span class="block text-gray-900 text-sm pt-2">Rs. 4,599.00 <p class="block text-gray-600 text-xs line-through pl-2 inline">Rs. 5,199.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save Rs. 600.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>HurryUp to Save Your Money</span>
+</div>
+
+</div>
+
+<!-- Second Accessories -->
+
+<div class="mt-10 ml-2 rounded rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+<img src="Images/Acoustic_Guitar_Accessories_Kit.jpg" class="object-cover pt-12 ">
+<div class="m-4">
+
+<span class="font-bold">Acoustic Guitar Accessories...</span>
+
+<span class="block text-gray-900 text-sm pt-2">Rs. 3,899.00 <p class="block text-gray-600 text-xs line-through pl-2 inline">Rs. 4,599.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save Rs. 700.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>HurryUp to Save Your Money</span>
+</div>
+
+</div>
+
+<!-- Third Accessories -->
+
+<div class="mt-8 ml-2 rounded rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+<img src="Images/Guitar_Accessories_Includes.jpg" class="object-cover pt-12 ">
+<div class="m-4">
+
+<span class="font-bold">Acoustic Guitar Accessories...</span>
+
+<span class="block text-gray-900 text-sm pt-2">Rs. 1,499.00 <p class="block text-gray-600 text-xs line-through pl-2 inline">Rs. 2,499.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save Rs. 1000.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>HurryUp to Save Your Money</span>
+</div>
+
+</div>
+
+<!-- Fourth Accessories -->
+
+<div class="mt-4 ml-2 rounded rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+<img src="Images/GUITAR_ACCESSORIES_PICKS_STRINGS_SET.jpg" class="object-cover pt-12 ">
+<div class="m-4">
+
+<span class="font-bold">GUITAR ACCESSORIES STRINGS SET...</span>
+
+<span class="block text-gray-900 text-sm pt-2">Rs.799.00 <p class="block text-gray-600 text-xs line-through pl-2 inline">Rs. 1,499.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save Rs. 700.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>HurryUp to Save Your Money</span>
+</div>
+
+</div>
+
+<!-- Fifth Accessories -->
+
+<div class="mt-4 pt-4 ml-2 rounded rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+<img src="Images/TANMUS_3in1_Guitar_Capo(with_Pick_Holder_and_4Picks).jpg" class="object-cover pt-12 ">
+<div class="m-4">
+
+<span class="font-bold">TANMUS 3in1 Guitar Capo(with...</span>
+
+<span class="block text-gray-900 text-sm pt-2">Rs.599.00 <p class="block text-gray-600 text-xs line-through pl-2 inline">Rs. 1,099.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save Rs. 500.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>HurryUp to Save Your Money</span>
+</div>
+
+</div>	
+
+<!-- Sixth Accessories -->
+
+<div class="mt-4 pt-4 ml-2 rounded rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+<img src="Images/Acoustic_Guitar_Accessories_with_bag.jpg" class="object-cover pt-12 ">
+<div class="m-4">
+
+<span class="font-bold">Acoustic_Guitar_Accessories_wit...</span>
+
+<span class="block text-gray-900 text-sm pt-2">Rs.1,299.00 <p class="block text-gray-600 text-xs line-through pl-2 inline">Rs. 1,999.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save Rs. 700.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>HurryUp to Save Your Money</span>
+</div>
+
+</div>			
+
+</div>
+</section>
+
+<section>
+<div class="flex grid grid-cols-2 mt-6 m-2">
+<div class="felx grid grid-rows-1 pr-2 shadow-xl">
+<a href="#"><img src="Images/new_arrival.jpg" class="w-full h-full"></a>
+<div class="grid grid-cols-3">
+<div>
+<a href="#"><img src="Images/electric-rock-guitar-acoustic-jazz.jpg"></a>
+</div>
+<div>
+<a href="#"><img src="Images/furch-rainbow-series@1400x1050.jpg"></a>
+</div>
+<div>
+<a href="#"><img src="Images/Rock_Guitar.png"></a>
+</div>
+
+</div>
+</div>
+<div class="grid grid-rows-1 pl-2 shadow-xl">
+<div>
+<a href="#"><img src="Images/guitar_set_3.jpg"></a>
+</div>
+<div >
+<div class="mb-2">
+<a href="#">
+<img src="Images/DAILY-DEAL-CMS-BANNER-DESKTOP.png">
+</a>
+</div>
+<div>
+<a href="#">
+<img src="Images/American-Ultra-Telecasters.jpg">
+</a>
+</div>
+</div>
+<div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- End of Guitar's Accessories Section  -->
+
+
+<section class="mt-6">
+
+<div class="flex justify-center items-center" >
+<span class="font-bold mt-8 px-4 border-b-2 border-gray-500 rounded-full shadow-xl my-4 flex justify-center items-center sm:text-2xl md:text-3xl lg:text-4xl">Top Brands</span>
+
+
+</div>
+
+<div class="h-full mt-4 grid grid-cols-4 gap-4 ">
+
+<div>
+<img src="https://www.uniqlo.com/us/en/news/sp/topics/2019052901/img/mimg_1_m.jpg" class="h-full">
+</div>
+
+<div >
+<img src="https://i.ytimg.com/vi/cYOyOz7OG7g/maxresdefault.jpg" class="h-full">
+</div>
+
+<div>
+<img src="https://i.ytimg.com/vi/Ccs4vA9e1B8/maxresdefault.jpg" class="h-full">
+</div>
+
+<div>
+<img src="https://cdn.shopify.com/s/files/1/0657/6821/collections/vault.jpg?v=1661340966">
+</div>
+
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7jFtb6Xj3eVsCufafH_Ymp_66cn1XH7dHQ&usqp=CAU" class="h-full">
+</div>
+
+<div>
+<img src="https://images.ctfassets.net/m8onsx4mm13s/5NVBjQ96czWSrE5bT0PbVR/2c0a82964c3339a4a9829df9ac9edfbf/M_Masthead_AcousticLanding.png" class="h-full">
+</div>
+
+<div>
+<img src="https://cdn.mos.cms.futurecdn.net/8gsjcRGoicDvMoyKxzgUm-1200-80.jpg">
+<img src="https://i.ytimg.com/vi/T4NaBSNMEiY/mqdefault.jpg">
+</div>
+
+<div>
+<img src="https://leftyfretz.com/wp-content/uploads/2021/03/lefty-jackson-guitars.jpg" class="mb-2">
+<img src="https://media.pmtonline.co.uk/media/wysiwyg/epiphone-sg-guitars.jpg" class="mt-2">
+</div>
+</div>
+</section>
+
+<section>
+
+<div>
+
+<div class="mb-6 text-4xl font-bold border-b-2 border-gray-500 flex justify-center items-center">
+<div class="sm:text-2xl md:text-3xl lg:text-4xl font-bold inline-flex px-4 border-b-2 border-gray-500 rounded-full shadow-xl text-gray-900 p-2 px-4 my-4">Beat's Premium Guitar</div>
+
+</div>
+
+<div class="mt-8 flex-col sm:grid grid-cols-3 gap-10 duration-300 sm:space-y-6 md:space-y-6 lg:px-6">
+
+<!-- First Guiter -->
+
+<div class="bg-white rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+
+<img src="Images/fender_jazz_master.jpg" class="w-xl h-xl object-cover">
+<div class="m-4">
+<span class="font-bold"> Fender Jazz Master Player Series Electro-Acoustic Guiter</span>
+<span class="block text-gray-900 text-sm pt-2">Rs. 35,218.00 <p class="block text-gray-600 text-xs line-through inline pl-2">Rs. 37,079.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0">
+<span>Save <br>Rs. 1,854.00</span>
+</div>
+<div class="w-fit h-fit font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>Grab the Deal</span>
+</div>
+</div>
+
+<!-- Second Guiter -->
+
+<div class="bg-white rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+
+<img src="Images/Finder for Electric Guitar - Yamaha.png" class="w-lg h-lg object-cover">
+<div class="m-4">
+<span class="font-bold"> Fender Classical Vibe Stratocaster HSS  Electric Guitar Series</span>
+<span class="block text-gray-900 text-sm pt-2">Rs. 45,049.00 <p class="block text-gray-600 text-xs line-through inline pl-2">Rs. 47,849.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save <br>Rs. 2,800.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>Grab the Deal</span>
+</div>
+</div>
+
+<!-- Third Guiter -->
+
+<div class="bg-white rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 pt-2">
+
+<img src="Images/Epiphone Les Paul Standard 50s 6 String Right Handed Electric Guitar.jpg" class="w-lg h-lg object-cover">
+<div class="m-4">
+<span class="font-bold"> Epiphone Les Paul Standard 50s 6 String Right Handed Electric Guitar</span>
+<span class="block text-gray-900 text-sm pt-2">Rs. 42,049.00 <p class="block text-gray-600 text-xs line-through inline pl-2">Rs. 47,849.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save <br>Rs. 5,800.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 flex justify-center items-center ">
+<span>Grab the Deal</span>
+</div>
+</div>
+
+<!-- Fourth Guiter -->
+
+<div class="bg-white rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+
+<img src="Images/Chapman_ghost_fret.jpg" class="w-lg h-lg object-cover">
+<div class="m-4">
+<span class="font-bold"> Epiphone Les Paul Standard 50s 6 String Right Handed Electric Guitar</span>
+<span class="block text-gray-900 text-sm pt-2">Rs. 38,049.00 <p class="block text-gray-600 text-xs line-through inline pl-2">Rs. 40,849.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save <br>Rs. 2,800.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>Grab the Deal</span>
+</div>
+</div>
+
+<!-- Fifth Guiter -->
+
+<div class="bg-white rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+
+<img src="Images/gibson_sg_guitar.jpg" class="w-lg h-lg object-cover">
+<div class="m-4">
+<span class="font-bold"> Gibson SG vibe 70s Stratocaster Electric Guitar</span>
+<span class="block text-gray-900 text-sm pt-2">Rs. 46,049.00 <p class="block text-gray-600 text-xs line-through inline pl-2">Rs. 50,849.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save <br>Rs. 4,800.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>Grab the Deal</span>
+</div>
+</div>
+
+<!-- sixth Guiter -->
+
+<div class="bg-white rounded-lg overflow-hidden shadow-lg relative hover:shadow-xl transform hover:scale-110 transition-ease-in duration-500 ">
+
+<img src="Images/jcraft_guitar.png" class="w-lg h-lg object-cover">
+<div class="m-4">
+<span class="font-bold"> jcraft guitar Electric Guitar</span>
+<span class="block text-gray-900 text-sm pt-2">Rs. 48,049.00 <p class="block text-gray-600 text-xs line-through inline pl-2">Rs. 42,049.00</p></span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 absolute top-0 ">
+<span>Save <br>Rs. 6000.00</span>
+</div>
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-4 flex justify-center items-center ">
+<span>Grab the Deal</span>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section>
+
+<div>
+<div>
+<div class="font-bold mt-12 pb-2 flex justify-center items-center sm:text-2xl md:text-3xl lg:text-4xl">Let Customers Speak For us
+</div>
+
+<div class=" border-b-2 border-gray-500 pb-4 flex justify-center items-center">
+
+<div class="flex justify-center items-center block">
+<span class="pt-2">
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star-half-stroke fa-xl"></i>
+
+<p class="block text-gray-600  flex justify-center items-center mt-2">From 40066 Reviews</p></span>
+</div>
+
+<span class="flex justify-center items-center">
+
+</span>
+<div class="flex justify-center items-center">
+<span></span>
+</div>
+</div>
+</div>
+
+<div class="mt-8 lg:grid grid-cols-3 gap-5 duration-300">
+
+<!-- First Review -->
+
+<div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl ml-6">	
+<div class="flex justify-center items-center mt-6">
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star-half-stroke fa-xl"></i>
+</div>
+
+
+<div class="my-4 text-center">
+<span> Overall quality is Good such a low price. Worthy...!</span>
+
+<div class="flex justify-center items-center block">
+<span class="block text-gray-900 text-sm pt-2">Anil Kumar<p class="block text-gray-600 text-xs  flex justify-center items-center pl-2">10/05/22</p></span>
+</div>
+
+<div class="flex justify-center items-center mt-4">
+<img src="Images/fender_jazz_master.jpg" style="width: 50px; height: 50px">
+</div>
+
+<div class="font-bold relative flex text-center justify-center items-center"> Fender Jazz Master Player Series Electro-Acoustic Guiter
+</div>
+
+</div>
+
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 ">
+<span></span>
+</div>
+</div>
+
+
+<!-- Second Review -->
+
+<div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl ">	
+<div class="flex justify-center items-center mt-6">
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star-half-stroke fa-xl"></i>
+<i class="fa-regular fa-star fa-xl"></i>
+</div>
+
+
+<div class="m-4 text-center ">
+<span>Good quality, On Time Delevary. Satisfied Support..!</span>
+
+<div class="flex justify-center items-center block">
+<span class="block text-gray-900 text-sm pt-2">Ravindu varma<p class="block text-gray-600 text-xs  flex justify-center items-center pl-2">20/10/22</p></span>
+</div>
+
+<div class="flex justify-center items-center mt-4">
+<img src="Images/Guitar_Accessories_Includes.jpg" style="width: 50px; height: 50px">
+</div>
+
+<div class="font-bold relative flex text-center justify-center items-center"> Guitar Accessories Kit Includes 15pcs Silicone Guitar Finger
+</div>
+
+</div>
+
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 ">
+<span></span>
+</div>
+</div>
+
+<!-- Third Review -->
+
+<div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl mr-6">	
+
+<div class="flex justify-center items-center mt-6">
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-solid fa-star fa-xl"></i>
+<i class="fa-regular fa-star fa-xl"></i>
+</div>
+
+
+<div class="m-4 text-center">
+<span> Quick Customer support. Value for Money...!</span>
+
+<div class="flex justify-center items-center block">
+<span class="block text-gray-900 text-sm pt-2">Abhinav Shinde<p class="block text-gray-600 text-xs  flex justify-center items-center pl-2">10/01/23</p></span>
+</div>
+<div class="flex justify-center items-center mt-4">
+<img src="Images/Chapman_ghost_fret.jpg" style="width: 50px; height: 50px">
+</div>
+
+<div class="font-bold relative flex text-center justify-center items-center"> Fender Chapman_ghost Player Series Electro-Acoustic Guiter
+</div>
+
+</div>
+
+<div class="font-sans bg-gray-900 text-xs text-gray-200 uppercase font-bold  rounded-tl-2xl p-2 ">
+<span></span>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Start of Footer Section -->
+
+<section class="mt-6">
+<div class="bg-blue-900 md:flex-col  lg:grid grid-cols-4 gap-6">
+<div class=" justify-center items-center">
+<div class="text-white flex justify-center items-center sm:pt-8 text-xl md:pt-8 text-2xl lg:mt-6">
+<span>Call For the Best Deals</span>
+</div>
+
+<div class="border-4 border-white sm:mx-24 md:mx-24 lg:w-64 mt-6  flex justify-center items-center lg:ml-4">
+<div class="felx justify-center items-center text-center p-4 sm:text-md md:text-xl lg:text-xl">
+<span><i class="fa-solid fa-phone" style="color: #fff;"> +91-000-000-0000</i></span>
+<span class="flex justify-center items-center text-center text-white text-lg">Call for the best deals Daily(9:00am to 6:00pm)
+</span>
+</div>
+
+</div>
+
+<div class="text-center text-white mt-4 ml-4 sm:text-3xl md:text-2xl lg:text-lg">
+<span>Ecperience the Beat's site on Mobile App</span>
+</div>
+<div class="flex justify-evenly mt-6 mb-6 ">
+<div>
+<a href="#">
+<img src="https://cdn.shopify.com/s/files/1/0657/6821/files/Android-App-Store-logos_2_1_480x480.png?v=1677656586">
+</a>
+</div>
+
+<div>
+<a href="#">
+<img src="https://cdn.shopify.com/s/files/1/0657/6821/files/Android-App-Store-logos_1_1_480x480.png?v=1677656659">
+</a>
+</div>
+</div>
+</div>
+
+<div class=" text-center text-white mt-6 sm:text-center">
+<sapn class="sm:text-2xl sm:font-bold md:text-2xl lg:text-2xl">Store Information</sapn>
+<div class="sm:text-xl lg:mt-4 lg:mb-4">
+<div class="p-2"><a href="#">15 Day Return Policy</a></div>
+<div class="p-2"><a href="#">About Us</a></div>
+<div class="p-2"><a href="#">Buy with Assurance </a></div>
+<div class="p-2"><a href="#">Blog</a></div>
+<div class="p-2"><a href="#">Carrer Opertunities</a></div>
+<div class="p-2"><a href="#">Privecy Policy</a></div>
+<div class="p-2"><a href="#">Terms & Conditions</a></div>
+<div class="p-2"><a href="#">Beat's Reward Program</a></div>
+<div class="p-2"><a href="#">Beat's Solutions</a></div>
+<div class="p-2"><a href="#">Beat's Service Centre</a></div>
+<div class="p-2"><a href="#">Beat's Stores</a></div>
+</div>
+
+<div class="sm:border-double border-b-8 md:border-none"></div>
+
+</div>
+
+<div class="text-center text-white mt-6 sm:text-center">
+<h4 class="sm:text-2xl sm:font-bold md:text-2xl lg:text-2xl">Support & Service</h4>
+<div class="mt-4 mb-4 sm:text-xl">
+<div class="p-2"><a href="#">Order Lookup</a></div>
+<div class="p-2"><a href="#">View all Manufactures</a></div>
+<div class="p-2"><a href="#">Contact Us</a></div>
+<div class="p-2"><a href="#">Freequently Asked Questions</a></div>
+<div class="p-2"><a href="#">Points & Rewards / Loyalty Programs</a></div>
+<div class="p-2"><a href="#">Shpping Guarantee</a></div>
+<div class="p-2"><a href="#">Standard and Premium Waranty Plans</a></div>
+<div class="p-2"><a href="#">Shipping Options and Policies</a></div>
+<div class="p-2"><a href="#">Beat's Payment Options</a></div>
+<div class="p-2"><a href="#">Unbox Policies and T&Cs</a></div>
+</div>
+
+<div class="sm:border-double border-b-8 md:border-none"></div>
+
+</div>
+
+<div class="mr-4 sm:text-center">
+<div class="text-white sm:text-2xl sm:font-bold md:text-2xl lg:text-2xl mt-6 ">
+<span>Secure Checkout</span>
+</div>
+
+<div class="text-white mr-4 mt-4 sm:text-center text-lg lg:text-justify">
+<span>
+We are encrypted SSL Security to ensure that your Card and Payment information is 100% Protected.
+</span>
+</div>
+
+<div class="flex justify-evenly items-center mt-6 sm:py-6 ">
+<div>
+<a href="#">
+<img src="https://cdn.shopify.com/s/files/1/0657/6821/t/201/assets/ff-checkout-visa.png?v=139079826130638164731659698181">
+</a>
+</div>
+
+<div>
+<a href="#">
+<img src="https://cdn.shopify.com/s/files/1/0657/6821/t/201/assets/ff-checkout-mastercard.png?v=144698862430520309971659698181">	
+</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-blue-900 p-6 border-t-2 border-gray-200 text-white">
+
+<div class="sm:block text-center lg:flex justify-between items-center">
+
+<div class="flex justify-evenly text-3xl">
+<div class="social-media">
+<a href="#"><i class="fa-brands fa-twitter"></i></a>
+</div>
+
+<div class="social-media">
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
+<div class="social-media">
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+</div>
+
+<div class="social-media">
+<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<div class="social-media">
+<a href="#"><i class="fa-brands fa-google-plus"></i></a>
+</div>
+
+<div class="social-media">
+<a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+</div>
+
+</div>
+
+<div class="sm:py-12">
+<span>&copy 2021 BEAT'S.COM All Rights Reserved</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- End of Footer Section -->		
+</body>
+</html>
